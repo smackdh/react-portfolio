@@ -9,6 +9,10 @@ module.exports = {
     extend: {
       fontFamily: {
         burtons: "burtons"
+      },
+      colors: {
+        zoro: "#cae962",
+        darkBase: "#202125"
       }
     },
   },
