@@ -1,3 +1,4 @@
+/* Adding Tailwind to the global css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,6 +21,7 @@ a {
   box-sizing: border-box;
 }
 
+/* Adding external font saved in 'public/Burtons.otf' */
 @font-face {
   font-family: "burtons";
   src: url('../public/Burtons.otf')
