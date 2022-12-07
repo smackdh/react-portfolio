@@ -25,14 +25,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='bh-white px-10 md:px-20 lg:px-40'>
+      <main className='bh-white px-10 md:px-20 lg:px-40 dark:bg-gray-900'>
       {/* Top Section Start */}
       <section className="min-h-screen">
       <nav className="p-10 mb-12 flex justify-between">
         <h1 className='text-xl font-burtons'>smackdh</h1>
         <ul className='flex items-center'>
           <li>
-            <BsFillMoonStarsFill className='cursor-pointer text-2xl'/>
+            <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl'/>
           </li>
           <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 border-none" href="#">Resume</a></li>
         </ul>
@@ -40,8 +40,8 @@ export default function Home() {
         {/* Profile Info */}
         <div className='text-center p-10'>
             <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl'>Mattias Velamsson</h2>
-            <h3 className='text-2xl py-2 md:text-3xl'>Fullstack Developer</h3>
-            <p className='text-md py-5 md:text-xl leading-6 text-gray-800 max-w-xl mx-auto'>
+            <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>Fullstack Developer</h3>
+            <p className='text-md py-5 md:text-xl leading-6 text-gray-800 max-w-xl mx-auto dark:text-gray-300'>
               Hey, I'm Mattias!
               I used to work as a technical engineer and team leader back in Sweden for 7 years. I've experimented with code, databases and more since a young age and always loved it. Coming to Japan I decided I wanted to take the opportunity and get back to my childhood hobbies and become a developer. I graduated from LeWagon bootcamp during winter 2022 and am now looking forward to new challenges in my career-path!
               Hit me up on LinkedIn or by mail if you'd like to know more about me or have any questions!
@@ -49,7 +49,7 @@ export default function Home() {
 
         </div>
         {/* Links to socials */}
-        <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
+        <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-200'>
             <AiFillGithub/>
             <AiFillLinkedin/>
         </div>
@@ -73,7 +73,7 @@ export default function Home() {
       </div>
       {/* Card One */}
       <div className='lg:flex gap-10'>
-        <div className='text-center shadow-lg p-10 rounded-xl my-10'>
+        <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
           <Image className="mx-auto" src={design} width={100} height={100}/>
           <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
           <p className='py-2'>I make some sick ass designs.</p>
@@ -83,7 +83,7 @@ export default function Home() {
           <p className='text-gray-800 py-1'>JavaScript</p>
         </div>
       {/* Card Two */}
-        <div className="text-center shadow-lg p-10 rounded-xl my-10">
+        <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white">
           <Image className="mx-auto" src={code} width={100} height={100}/>
           <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
           <p className='py-2'>I make some sick ass designs.</p>
@@ -93,7 +93,7 @@ export default function Home() {
           <p className='text-gray-800 py-1'>JavaScript</p>
         </div>
       {/* Card Three */}
-        <div className='text-center shadow-lg p-10 rounded-xl my-10'>
+        <div className='text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white'>
           <Image className="mx-auto" src={consulting} width={100} height={100}/>
           <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
           <p className='py-2'>I make some sick ass designs.</p>
