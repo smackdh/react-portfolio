@@ -6,6 +6,12 @@ import deved from "../public/dev-ed-wave.png";
 import design from "../public/design.png";
 import code from "../public/code.png";
 import consulting from "../public/consulting.png";
+import web1 from '../public/web1.png';
+import web2 from '../public/web2.png';
+import web3 from '../public/web3.png';
+import web4 from '../public/web4.png';
+import web5 from '../public/web5.png';
+import web6 from '../public/web6.png';
 
 export default function Home() {
   return (
@@ -16,7 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='bh-white px-10'>
+      <main className='bh-white px-10 md:px-20 lg:px-40'>
       {/* Top Section Start */}
       <section className="min-h-screen">
       <nav className="p-10 mb-12 flex justify-between">
@@ -30,7 +36,7 @@ export default function Home() {
         </nav>
         {/* Profile Info */}
         <div className='text-center p-10'>
-            <h2 className='text-5xl py-2 text-teal-600 font-medium'>Mattias Velamsson</h2>
+            <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl'>Mattias Velamsson</h2>
             <h3 className='text-2xl py-2'>Fullstack Developer</h3>
             <p className='text-md py-5 leading-6 text-gray-800'>
               Hey, I'm Mattias!
@@ -62,12 +68,44 @@ export default function Home() {
         Put something interesting and important here..
         </p>
       </div>
+      {/* Card One */}
       <div>
-        <div>
-          <Image src={design} width={100} height={100}/>
-          <h3>Beautiful Designs</h3>
-          <p>I make some sick ass designs.</p>
+        <div className='text-center shadow-lg p-10 rounded-xl my-10'>
+          <Image className="mx-auto" src={design} width={100} height={100}/>
+          <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
+          <p className='py-2'>I make some sick ass designs.</p>
+          <h4 className='py-4 text-teal-600'>Technologies used</h4>
+          <p className='text-gray-800 py-1'>Ruby</p>
+          <p className='text-gray-800 py-1'>Ruby on Rails</p>
+          <p className='text-gray-800 py-1'>JavaScript</p>
         </div>
+      </div>
+      {/* Card Two */}
+      <div>
+        <div className="text-center shadow-lg p-10 rounded-xl my-10">
+          <Image className="mx-auto" src={code} width={100} height={100}/>
+          <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
+          <p className='py-2'>I make some sick ass designs.</p>
+          <h4 className='py-4 text-teal-600'>Technologies used</h4>
+          <p className='text-gray-800 py-1'>Ruby</p>
+          <p className='text-gray-800 py-1'>Ruby on Rails</p>
+          <p className='text-gray-800 py-1'>JavaScript</p>
+        </div>
+      </div>
+      {/* Card Three */}
+      <div>
+        <div className='text-center shadow-lg p-10 rounded-xl my-10'>
+          <Image className="mx-auto" src={consulting} width={100} height={100}/>
+          <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
+          <p className='py-2'>I make some sick ass designs.</p>
+          <h4 className='py-4 text-teal-600'>Technologies used</h4>
+          <p className='text-gray-800 py-1'>Ruby</p>
+          <p className='text-gray-800 py-1'>Ruby on Rails</p>
+          <p className='text-gray-800 py-1'>JavaScript</p>
+        </div>
+      </div>
+      <div>
+      <Image src={web1}/>
       </div>
       </section>
       </main>
