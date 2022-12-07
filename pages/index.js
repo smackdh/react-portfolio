@@ -13,6 +13,7 @@ import web4 from '../public/web4.png';
 import web5 from '../public/web5.png';
 import web6 from '../public/web6.png';
 
+
 export default function Home() {
   return (
     <div>
@@ -37,8 +38,8 @@ export default function Home() {
         {/* Profile Info */}
         <div className='text-center p-10'>
             <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl'>Mattias Velamsson</h2>
-            <h3 className='text-2xl py-2'>Fullstack Developer</h3>
-            <p className='text-md py-5 leading-6 text-gray-800'>
+            <h3 className='text-2xl py-2 md:text-3xl'>Fullstack Developer</h3>
+            <p className='text-md py-5 md:text-xl leading-6 text-gray-800 max-w-xl mx-auto'>
               Hey, I'm Mattias!
               I used to work as a technical engineer and team leader back in Sweden for 7 years. I've experimented with code, databases and more since a young age and always loved it. Coming to Japan I decided I wanted to take the opportunity and get back to my childhood hobbies and become a developer. I graduated from LeWagon bootcamp during winter 2022 and am now looking forward to new challenges in my career-path!
               Hit me up on LinkedIn or by mail if you'd like to know more about me or have any questions!
@@ -50,7 +51,7 @@ export default function Home() {
             <AiFillGithub/>
             <AiFillLinkedin/>
         </div>
-        <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden'>
+        <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96'>
         <Image src={deved} layout="fill" objectFit="cover"/>
         </div>
       </section>
@@ -69,7 +70,7 @@ export default function Home() {
         </p>
       </div>
       {/* Card One */}
-      <div>
+      <div className='lg:flex gap-10'>
         <div className='text-center shadow-lg p-10 rounded-xl my-10'>
           <Image className="mx-auto" src={design} width={100} height={100}/>
           <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
@@ -79,9 +80,7 @@ export default function Home() {
           <p className='text-gray-800 py-1'>Ruby on Rails</p>
           <p className='text-gray-800 py-1'>JavaScript</p>
         </div>
-      </div>
       {/* Card Two */}
-      <div>
         <div className="text-center shadow-lg p-10 rounded-xl my-10">
           <Image className="mx-auto" src={code} width={100} height={100}/>
           <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
@@ -91,9 +90,7 @@ export default function Home() {
           <p className='text-gray-800 py-1'>Ruby on Rails</p>
           <p className='text-gray-800 py-1'>JavaScript</p>
         </div>
-      </div>
       {/* Card Three */}
-      <div>
         <div className='text-center shadow-lg p-10 rounded-xl my-10'>
           <Image className="mx-auto" src={consulting} width={100} height={100}/>
           <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
@@ -104,8 +101,13 @@ export default function Home() {
           <p className='text-gray-800 py-1'>JavaScript</p>
         </div>
       </div>
-      <div>
-      <Image src={web1}/>
+      <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
+        <div className='basis-1/3 flex-1'>
+          <Image src={web1} className="rounded-lg object-cover" width={"100%"} height={"100%"} layout="responsive"/>
+        </div>
+        <div className='basis-1/3 flex-1'>
+         <Image src={web1} className="rounded-lg object-cover" width={"100%"} height={"100%"} layout="responsive"/>
+        </div>
       </div>
       </section>
       </main>
