@@ -46,7 +46,8 @@ export default function Home() {
             </h3>
             <p className='text-md py-5 md:text-xl leading-6 text-gray-800 max-w-xl mx-auto dark:text-white'>
               Hey, Im Mattias!
-              I used to work as a technical engineer and team leader back in Sweden for 7 years. I graduated from LeWagon bootcamp during winter 2022 and am now looking forward to new challenges in my career-path!
+              I used to work as a technical engineer and team leader back in Sweden for 7 years. I graduated from LeWagon
+              bootcamp during winter 2022 and am now looking forward to new challenges in my career-path!
               Hit me up on LinkedIn or by mail if youd like to know more about me or have any questions!
             </p>
         </div>
@@ -56,14 +57,14 @@ export default function Home() {
             <AiFillLinkedin/>
         </div>
         <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96'>
-        <Image src={deved} layout="fill" objectFit="cover"/>
+        <Image src={deved} layout="fill" objectFit="cover" alt=""/>
         </div>
       </section>
       {/* Top Section End */}
       <section>
       <div className='text-center py-10'>
         <h3 className="text-3xl py-1 dark:text-white">Services I offer</h3>
-        <p className='text-md py-2 leading-6 text-gray-80  dark:text-white'>What I've been working on.....
+        <p className='text-md py-2 leading-6 text-gray-80  dark:text-white'>What Ive been working on.....
         <span className='text-teal-500'> Ozei </span>
         a group project of 4 people, creating and deploying a working Prototype in 2 weeks.
         </p>
@@ -75,7 +76,7 @@ export default function Home() {
       {/* Card One */}
       <div className='lg:flex gap-10 justify-center'>
         <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
-          <Image className="mx-auto" src={design} width={100} height={100}/>
+          <Image className="mx-auto" src={design} width={100} height={100} alt=""/>
           <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
           <p className='py-2'>I make some sick ass designs.</p>
           <h4 className='py-4 text-teal-600'>Technologies used</h4>
@@ -85,7 +86,7 @@ export default function Home() {
         </div>
       {/* Card Two */}
         <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white">
-          <Image className="mx-auto" src={code} width={100} height={100}/>
+          <Image className="mx-auto" src={code} width={100} height={100} alt=""/>
           <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
           <p className='py-2'>I make some sick ass designs.</p>
           <h4 className='py-4 text-teal-600'>Technologies used</h4>
@@ -95,7 +96,7 @@ export default function Home() {
         </div>
       {/* Card Three */}
         <div className='text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white'>
-          <Image className="mx-auto" src={consulting} width={100} height={100}/>
+          <Image className="mx-auto" src={consulting} width={100} height={100} alt=""/>
           <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
           <p className='py-2'>I make some sick ass designs.</p>
           <h4 className='py-4 text-teal-600'>Technologies used</h4>
@@ -106,10 +107,10 @@ export default function Home() {
       </div>
       <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
         <div className='basis-1/3 flex-1'>
-          <Image src={ozei} className="rounded-lg object-cover" width={"10%"} height={"10%"} layout="responsive"/>
+          <Image src={ozei} className="rounded-lg object-cover" width={"10%"} height={"10%"} layout="responsive" alt=""/>
         </div>
         <div className='basis-1/3 flex-1'>
-         <Image src={web2} className="rounded-lg object-cover" width={"100%"} height={"100%"} layout="responsive"/>
+         <Image src={web2} className="rounded-lg object-cover" width={"100%"} height={"100%"} layout="responsive" alt=""/>
         </div>
       </div>
       </section>
