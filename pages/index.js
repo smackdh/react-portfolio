@@ -35,10 +35,10 @@ export default function Home() {
         {/* Profile Info */}
         <div className='text-center p-10 py-10'>
             <h3 className='text-2xl py-2 font-medium md:text-4xl dark:text-white font-raleway'>
-            Hello, I'm <span className='text-teal-500 font-extrabold'>Mattias Velamsson</span>
+            Hello, I`m <span className='text-teal-500 font-extrabold'>Mattias Velamsson</span>
             </h3>
             <h3 className='text-2xl py-2 font-medium md:text-4xl dark:text-white font-raleway'>
-            I'm a full-stack webb developer.
+            I`m a full-stack webb developer.
             </h3>
         </div>
         {/* Links to socials */}
@@ -77,7 +77,7 @@ export default function Home() {
       {/* Card Three */}
         <div className='text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white'>
           <Image className="mx-auto" src={consulting} width={100} height={100} alt=""/>
-          <h3 className='text-lg font-medium pt-8 pb-2'>Extras</h3>
+          <h3 className='text-lg font-medium pt-8 pb-2 text-teal-600'>Extras</h3>
           <p className='text-gray-800 py-1'>Figma</p>
           <p className='text-gray-800 py-1'>Heroku</p>
           <p className='text-gray-800 py-1'>JavaScript</p>
@@ -89,7 +89,9 @@ export default function Home() {
       <section>
       <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
         <div className='basis-1/3 flex-1'>
-          <Image src={ozei} className="rounded-lg object-cover" width={"100%"} height={"100%"} layout="responsive" alt=""/>
+        <a href="http://www.ozei.fun/" target="_blank" rel="noreferrer">
+          <Image href="http://www.ozei.fun" src={ozei} className="rounded-lg object-cover" width={"100%"} height={"100%"} layout="responsive" alt=""/>
+          </a>
         </div>
         {/* <div className='basis-1/3 flex-1'>
          <Image src={web2} className="rounded-lg object-cover" width={"100%"} height={"100%"} layout="responsive" alt=""/>
