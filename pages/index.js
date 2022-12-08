@@ -2,16 +2,12 @@ import Head from 'next/head'
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
 import Image from "next/image";
-import deved from "../public/avatar2.png";
+import mattiasImg from "../public/mattias.png";
 import design from "../public/design.png";
 import code from "../public/code.png";
 import consulting from "../public/consulting.png";
-import ozei from '../public/Ozei-mobile.png';
+import ozei from '../public/Ozei2.png';
 import web2 from '../public/web2.png';
-import web3 from '../public/web3.png';
-import web4 from '../public/web4.png';
-import web5 from '../public/web5.png';
-import web6 from '../public/web6.png';
 import {useState} from "react";
 
 
@@ -28,83 +24,70 @@ export default function Home() {
       {/* Top Section Start */}
       <section className="min-h-screen">
       <nav className="p-10 mb-12 flex justify-between dark:text-white">
-        <h1 className='text-xl font-burtons'>smackdh</h1>
+        <h1 className='text-xl'>smackdh</h1>
         <ul className='flex items-center'>
           <li>
             <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl  dark:text-white'/>
           </li>
-          <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 border-none" href="#">Resume</a></li>
+          <li><a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 border-none" href="https://drive.google.com/file/d/16xGElql4_MwIVUDy-xTcxkdus_ElCEam/view?usp=share_link" target="_blank" rel="noreferrer">Resume</a></li>
         </ul>
         </nav>
         {/* Profile Info */}
         <div className='text-center p-10 py-10'>
-            <h3 className='text-2xl py-2 font-medium md:text-4xl dark:text-white'>
-            Hello, I'm <span className='text-teal-500'>Mattias Velamsson</span>
+            <h3 className='text-2xl py-2 font-medium md:text-4xl dark:text-white font-raleway'>
+            Hello, I'm <span className='text-teal-500 font-extrabold'>Mattias Velamsson</span>
             </h3>
-            <h3 className='text-2xl py-2 font-medium md:text-4xl dark:text-white'>
+            <h3 className='text-2xl py-2 font-medium md:text-4xl dark:text-white font-raleway'>
             I'm a full-stack webb developer.
             </h3>
-            {/* <p className='text-md py-5 md:text-xl leading-6 text-gray-800 max-w-xl mx-auto dark:text-white'>
-              I'm a Full-stack Web Developer living in Tokyo, Japan. I make web applications, check them out!
-            </p> */}
         </div>
         {/* Links to socials */}
         <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-teal-500'>
-            <AiFillGithub/>
-            <AiFillLinkedin/>
+        <a href="https://www.github.com/smackdh" target="_blank" rel="noreferrer"><AiFillGithub/></a>
+        <a href="https://www.linkedin.com/in/mattias-velamsson" target="_blank" rel="noreferrer"><AiFillLinkedin/></a>
         </div>
-        <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96'>
-        <Image src={deved} layout="fill" objectFit="cover" alt=""/>
+        <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-80 md:w-80'>
+        <Image src={mattiasImg} layout="fill" objectFit="cover" alt=""/>
         </div>
       </section>
       {/* Top Section End */}
       <section>
       <div className='text-center py-10'>
-        <h3 className="text-3xl py-1 dark:text-white">Stacks</h3>
-        <p className='text-md py-2 leading-6 text-gray-80  dark:text-white'>
-        Being a developer can be challenging.
-        {/* <span className='text-teal-500'> Back-end </span>
-        a group project of 4 people, creating and deploying a working Prototype in 2 weeks.
-        </p>
-        <p className='text-md py-2 leading-6 text-gray-80  dark:text-white'>This is some more informational text....
-        <span className='text-teal-500'> Subject </span> */}
-        </p>
+        <h3 className="text-3xl py-1 dark:text-white">About</h3>
       </div>
       {/* Card One */}
       <div className='lg:flex gap-10 justify-center'>
         <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
           <Image className="mx-auto" src={design} width={100} height={100} alt=""/>
-          <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
-          <p className='py-2'>I make some sick ass designs.</p>
-          <h4 className='py-4 text-teal-600'>Technologies used</h4>
-          <p className='text-gray-800 py-1'>Ruby</p>
-          <p className='text-gray-800 py-1'>Ruby on Rails</p>
+          <h3 className='text-lg font-medium pt-8 pb-2 text-teal-600'>Front-end</h3>
           <p className='text-gray-800 py-1'>JavaScript</p>
+          <p className='text-gray-800 py-1'>React.js</p>
+          <p className='text-gray-800 py-1'>HTML/CSS</p>
         </div>
       {/* Card Two */}
         <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white">
           <Image className="mx-auto" src={code} width={100} height={100} alt=""/>
-          <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
-          <p className='py-2'>I make some sick ass designs.</p>
-          <h4 className='py-4 text-teal-600'>Technologies used</h4>
+          <h3 className='text-lg font-medium pt-8 pb-2 text-teal-600'>Back-end</h3>
           <p className='text-gray-800 py-1'>Ruby</p>
           <p className='text-gray-800 py-1'>Ruby on Rails</p>
-          <p className='text-gray-800 py-1'>JavaScript</p>
+          <p className='text-gray-800 py-1'>SQL</p>
         </div>
       {/* Card Three */}
         <div className='text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white'>
           <Image className="mx-auto" src={consulting} width={100} height={100} alt=""/>
-          <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
-          <p className='py-2'>I make some sick ass designs.</p>
-          <h4 className='py-4 text-teal-600'>Technologies used</h4>
-          <p className='text-gray-800 py-1'>Ruby</p>
-          <p className='text-gray-800 py-1'>Ruby on Rails</p>
+          <h3 className='text-lg font-medium pt-8 pb-2'>Extras</h3>
+          <p className='text-gray-800 py-1'>Figma</p>
+          <p className='text-gray-800 py-1'>Heroku</p>
           <p className='text-gray-800 py-1'>JavaScript</p>
         </div>
       </div>
+      </section>
+
+      {/* Projects Section */}
+      <section>
       <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
         <div className='basis-1/3 flex-1'>
-          <Image src={ozei} className="rounded-lg object-cover" width={"10%"} height={"10%"} layout="responsive" alt=""/>
+          <Image src={ozei} className="rounded-lg object-cover" width={"100%"} height={"100%"} layout="responsive" alt=""/>
         </div>
         <div className='basis-1/3 flex-1'>
          <Image src={web2} className="rounded-lg object-cover" width={"100%"} height={"100%"} layout="responsive" alt=""/>

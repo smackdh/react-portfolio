@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        burtons: "burtons"
+        raleway: 'Raleway',
       },
       colors: {
         zoro: "#cae962",
