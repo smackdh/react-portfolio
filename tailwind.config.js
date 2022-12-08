@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'ozei': "url('../public/Ozei2.png')",
+      },
       fontFamily: {
         raleway: 'Raleway',
       },

@@ -51,6 +51,8 @@ export default function Home() {
         </div>
       </section>
       {/* Top Section End */}
+
+      {/* Cards section */}
       <section>
       <div className='text-center py-10'>
         <h3 className="text-3xl py-1 dark:text-white">About</h3>
@@ -65,7 +67,7 @@ export default function Home() {
           <p className='text-gray-800 py-1'>HTML/CSS</p>
         </div>
       {/* Card Two */}
-        <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white">
+        <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
           <Image className="mx-auto" src={code} width={100} height={100} alt=""/>
           <h3 className='text-lg font-medium pt-8 pb-2 text-teal-600'>Back-end</h3>
           <p className='text-gray-800 py-1'>Ruby</p>

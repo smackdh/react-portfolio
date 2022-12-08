@@ -25,5 +25,5 @@ a {
 /* Adding external font saved in 'public/Burtons.otf' */
 @font-face {
   font-family: "Raleway";
-  src: url('../public/Raleway.ttf')
+  src: url('../public/Raleway.ttf');
 }
