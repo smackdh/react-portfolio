@@ -38,18 +38,15 @@ export default function Home() {
         </nav>
         {/* Profile Info */}
         <div className='text-center p-10 py-10'>
-            <h2 className='text-5xl py-2 text-teal-500 font-medium md:text-6xl'>
-            Mattias Velamsson
-            </h2>
-            <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>
-            Fullstack Developer
+            <h3 className='text-2xl py-2 font-medium md:text-4xl dark:text-white'>
+            Hello, I'm <span className='text-teal-500'>Mattias Velamsson</span>
             </h3>
-            <p className='text-md py-5 md:text-xl leading-6 text-gray-800 max-w-xl mx-auto dark:text-white'>
-              Hey, Im Mattias!
-              I used to work as a technical engineer and team leader back in Sweden for 7 years. I graduated from LeWagon
-              bootcamp during winter 2022 and am now looking forward to new challenges in my career-path!
-              Hit me up on LinkedIn or by mail if youd like to know more about me or have any questions!
-            </p>
+            <h3 className='text-2xl py-2 font-medium md:text-4xl dark:text-white'>
+            I'm a full-stack webb developer.
+            </h3>
+            {/* <p className='text-md py-5 md:text-xl leading-6 text-gray-800 max-w-xl mx-auto dark:text-white'>
+              I'm a Full-stack Web Developer living in Tokyo, Japan. I make web applications, check them out!
+            </p> */}
         </div>
         {/* Links to socials */}
         <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-teal-500'>
@@ -63,14 +60,14 @@ export default function Home() {
       {/* Top Section End */}
       <section>
       <div className='text-center py-10'>
-        <h3 className="text-3xl py-1 dark:text-white">Services I offer</h3>
-        <p className='text-md py-2 leading-6 text-gray-80  dark:text-white'>What Ive been working on.....
-        <span className='text-teal-500'> Ozei </span>
+        <h3 className="text-3xl py-1 dark:text-white">Stacks</h3>
+        <p className='text-md py-2 leading-6 text-gray-80  dark:text-white'>
+        Being a developer can be challenging.
+        {/* <span className='text-teal-500'> Back-end </span>
         a group project of 4 people, creating and deploying a working Prototype in 2 weeks.
         </p>
         <p className='text-md py-2 leading-6 text-gray-80  dark:text-white'>This is some more informational text....
-        <span className='text-teal-500'> Subject </span>
-        Put something interesting and important here..
+        <span className='text-teal-500'> Subject </span> */}
         </p>
       </div>
       {/* Card One */}
