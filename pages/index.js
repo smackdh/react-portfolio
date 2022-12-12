@@ -7,6 +7,7 @@ import design from "../public/design.png";
 import code from "../public/code.png";
 import consulting from "../public/consulting.png";
 import ozei from '../public/Ozei2.png';
+import fff from '../public/FFF-image.png';
 
 import {useState} from "react";
 
@@ -25,7 +26,7 @@ export default function Home() {
       {/* Top Section Start */}
       <section className="min-h-screen">
       <nav className="flex justify-between p-10 mb-12 dark:text-white">
-        <h1 className='text-xl animate-bounce'>smackdh</h1>
+        <h1 className='lg:text-xl animate-bounce'>smackdh</h1>
         <ul className='flex items-center'>
           <li>
             <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='text-2xl duration-300 cursor-pointer dark:text-white hover:scale-110'/>
@@ -59,11 +60,12 @@ export default function Home() {
       {/* Cards section */}
       <section>
       <div className='py-10 text-center'>
-        <h3 className="py-1 text-3xl dark:text-white">About</h3>
+        <h3 className="py-1 text-5xl dark:text-white">About</h3>
+        <hr className='w-20 h-1 mx-auto my-6 bg-white rounded '/>
       </div>
       {/* Card One */}
       <div className='justify-center gap-10 lg:flex md:flex-row '>
-        <div className='p-10 my-10 text-center transition duration-500 ease-in-out transform shadow-lg rounded-xl dark:bg-white hover:-translate-y-1 hover:scale-110 lg:w-1/3'>
+        <div className='p-10 my-10 text-center transition duration-500 ease-in-out transform shadow-lg rounded-xl dark:bg-white lg:w-1/3'>
           <Image className="mx-auto" src={design} width={100} height={100} alt=""/>
           <h3 className='pt-8 pb-2 text-lg font-medium text-teal-600'>Front-end</h3>
           <div className='flex justify-center gap-10'>
@@ -94,7 +96,7 @@ export default function Home() {
           </div>
         </div>
       {/* Card Two */}
-        <div className="p-10 my-10 text-center transition duration-500 ease-in-out transform shadow-lg rounded-xl dark:bg-white hover:-translate-y-1 hover:scale-110 lg:w-1/3">
+        <div className="p-10 my-10 text-center transition duration-500 ease-in-out transform shadow-lg rounded-xl dark:bg-white lg:w-1/3">
           <Image className="mx-auto" src={code} width={100} height={100} alt=""/>
           <h3 className='pt-8 pb-2 text-lg font-medium text-teal-600'>Back-end</h3>
           <div className='flex justify-center gap-10'>
@@ -121,7 +123,7 @@ export default function Home() {
           </div>
         </div>
       {/* Card Three */}
-        <div className='p-10 my-10 text-center transition duration-500 ease-in-out transform shadow-lg rounded-xl dark:bg-white hover:-translate-y-1 hover:scale-110 lg:w-1/3'>
+        <div className='p-10 my-10 text-center transition duration-500 ease-in-out transform shadow-lg rounded-xl dark:bg-white lg:w-1/3'>
           <Image className="mx-auto" src={consulting} width={100} height={100} alt=""/>
           <h3 className='pt-8 pb-2 text-lg font-medium text-teal-600'>Extras</h3>
           <div className='flex justify-center gap-10'>
@@ -144,18 +146,22 @@ export default function Home() {
 
       {/* Projects Section */}
       <section>
-      <div className='flex flex-col gap-10 py-10 md:flex-row lg:flex-row lg:flex-wrap'>
-        <div className='flex-1 basis-1/3'>
-        <a href="https://www.ozei.fun/" target="_blank" rel="noreferrer">
-          <Image href="https://www.ozei.fun" src={ozei} className="object-cover rounded-lg" width={"50"} height={"50"} layout="responsive" alt=""/>
-          </a>
-        </div>
-        <div className='flex-1 basis-1/3'>
-        <a href="https://www.ozei.fun/" target="_blank" rel="noreferrer">
-          <Image href="https://www.ozei.fun" src={ozei} className="object-cover rounded-lg" width={"50"} height={"50"} layout="responsive" alt=""/>
-          </a>
-        </div>
+      <div className='py-10 text-center'>
+        <h3 className="py-1 text-5xl dark:text-white">Projects</h3>
+        <hr className='w-20 h-1 mx-auto my-6 bg-white rounded '/>
       </div>
+      <div className='flex flex-col gap-10 py-10 md:flex-row lg:flex-row lg:flex-wrap '>
+        <div className='flex-1 duration-300 basis-1/3 hover:scale-105 hover:translate-y-1'>
+        <a href="https://www.ozei.fun/" target="_blank" rel="noreferrer">
+          <Image href="https://www.ozei.fun" src={ozei} className="object-cover rounded-lg" width={"100%"} height={"100%"} layout="responsive" alt=""/>
+          </a>
+      </div>
+        </div>
+        <div className='flex-1 duration-300 basis-1/3 hover:translate-y-1 hover:scale-105'>
+        <a href="https://github.com/smackdh/fluffy_friends_finder" target="_blank" rel="noreferrer">
+          <Image href="https://github.com/smackdh/fluffy_friends_finder" src={fff} className="object-cover rounded-lg" width={"100%"} height={"100%"} layout="responsive" alt=""/>
+          </a>
+        </div>
       </section>
       </main>
     </div>
