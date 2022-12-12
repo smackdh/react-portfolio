@@ -62,29 +62,31 @@ export default function Home() {
         <h3 className="py-1 text-3xl dark:text-white">About</h3>
       </div>
       {/* Card One */}
-      <div className='justify-center gap-10 lg:flex md:flex-row'>
-        <div className='p-10 my-10 text-center transition duration-500 ease-in-out transform shadow-lg rounded-xl dark:bg-white hover:-translate-y-1 hover:scale-110'>
+      <div className='justify-center gap-10 lg:flex md:flex-row '>
+        <div className='p-10 my-10 text-center transition duration-500 ease-in-out transform shadow-lg rounded-xl dark:bg-white hover:-translate-y-1 hover:scale-110 lg:w-1/3'>
           <Image className="mx-auto" src={design} width={100} height={100} alt=""/>
           <h3 className='pt-8 pb-2 text-lg font-medium text-teal-600'>Front-end</h3>
-          <div className='gap-3 '>
-            <div>
-              <div className='flex items-center'>
+          <div className='flex justify-center gap-10'>
+            <div id='section-1'>
+              <div className='flex items-center gap-1'>
                 <i class="devicon-javascript-plain"></i>
                 <p className='py-1 text-gray-800'>JavaScript</p>
               </div>
-              <div className='flex items-center'>
+              <div className='flex items-center gap-1'>
                 <i class="devicon-react-plain"></i>
                 <p className='py-1 text-gray-800'>React.js</p>
               </div>
-              <div className='flex items-center'>
+              <div className='flex items-center gap-1'>
                 <i class="devicon-html5-plain"></i>
                 <p className='py-1 text-gray-800'>HTML </p>
               </div>
-              <div className='flex items-center'>
+            </div>
+            <div id='section-2'>
+              <div className='flex items-center gap-1'>
               <i class="devicon-css3-plain"></i>
               <p className='py-1 text-gray-800'>CSS </p>
               </div>
-              <div className='flex items-center'>
+              <div className='flex items-center gap-1'>
               <i class="devicon-tailwindcss-plain"></i>
               <p className='py-1 text-gray-800'>Tailwind </p>
               </div>
@@ -92,19 +94,50 @@ export default function Home() {
           </div>
         </div>
       {/* Card Two */}
-        <div className="p-10 my-10 text-center transition duration-500 ease-in-out transform shadow-lg rounded-xl dark:bg-white hover:-translate-y-1 hover:scale-110">
+        <div className="p-10 my-10 text-center transition duration-500 ease-in-out transform shadow-lg rounded-xl dark:bg-white hover:-translate-y-1 hover:scale-110 lg:w-1/3">
           <Image className="mx-auto" src={code} width={100} height={100} alt=""/>
           <h3 className='pt-8 pb-2 text-lg font-medium text-teal-600'>Back-end</h3>
-          <p className='py-1 text-gray-800'><i class="devicon-ruby-plain"></i> Ruby</p>
-          <p className='py-1 text-gray-800'><i class="devicon-rails-plain"></i> Ruby on Rails</p>
-          <p className='py-1 text-gray-800 '><i class="devicon-postgresql-plain"></i> PostgreSQL</p>
+          <div className='flex justify-center gap-10'>
+            <div id='section-1'>
+              <div className='flex items-center gap-1'>
+                <i class="devicon-ruby-plain"></i>
+                <p className='py-1 text-gray-800'>Ruby</p>
+              </div>
+              <div className='flex items-center gap-1'>
+                <i class="devicon-rails-plain"></i>
+                <p className='py-1 text-gray-800'>Rails</p>
+              </div>
+            </div>
+            <div id='section-2'>
+              <div className='flex items-center gap-1'>
+                <i class="devicon-postgresql-plain"></i>
+                <p className='py-1 text-gray-800'>PostgreSQL</p>
+              </div>
+              <div className='flex items-center gap-1'>
+                <i class="devicon-nodejs-plain"></i>
+                <p className='py-1 text-gray-800'>Node.js</p>
+              </div>
+            </div>
+          </div>
         </div>
       {/* Card Three */}
-        <div className='p-10 my-10 text-center transition duration-500 ease-in-out transform shadow-lg rounded-xl dark:bg-white hover:-translate-y-1 hover:scale-110'>
+        <div className='p-10 my-10 text-center transition duration-500 ease-in-out transform shadow-lg rounded-xl dark:bg-white hover:-translate-y-1 hover:scale-110 lg:w-1/3'>
           <Image className="mx-auto" src={consulting} width={100} height={100} alt=""/>
           <h3 className='pt-8 pb-2 text-lg font-medium text-teal-600'>Extras</h3>
-          <p className='py-1 text-gray-800'><i class="devicon-figma-plain"></i> Figma</p>
-          <p className='py-1 text-gray-800'><i class="devicon-heroku-plain"></i> Heroku</p>
+          <div className='flex justify-center gap-10'>
+            <div id='section-1'>
+              <div className='flex items-center gap-1'>
+              <i class="devicon-figma-plain"></i>
+              <p className='py-1 text-gray-800'>Figma</p>
+              </div>
+            </div>
+            <div id='section-2'>
+              <div className='flex items-center gap-1'>
+                <i class="devicon-heroku-plain"></i>
+                <p className='py-1 text-gray-800'>Heroku</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       </section>
