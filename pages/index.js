@@ -3,13 +3,15 @@ import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
 import Image from "next/legacy/image";
 import mattiasImg from "../public/avatar.png";
-import design from "../public/design.png";
-import code from "../public/code.png";
-import consulting from "../public/consulting.png";
+import frontEnd from "../public/design.png";
+import backEnd from "../public/code.png";
+import extras from "../public/consulting.png";
 import ozei from '../public/Ozei2.png';
 import fff from '../public/FFF-image.png';
-
+import Card from '../components/common/card/Card';
 import {useState} from "react";
+import cardsDatas from '../components/common/card/cardsDatas';
+import CardLanguages from '../components/common/card/CardLanguages';
 
 
 export default function Home() {
@@ -25,6 +27,7 @@ export default function Home() {
       <main className='px-10 bh-white dark:bg-darkBase md:px-20 lg:px-40 scroll-smooth'>
       {/* Top Section Start */}
       <section className="min-h-screen">
+
       <nav className="flex justify-between p-10 mb-12 dark:text-white">
         <h1 className='lg:text-xl animate-bounce'>smackdh</h1>
         <ul className='flex items-center'>
@@ -34,6 +37,7 @@ export default function Home() {
           <li className='duration-300 hover:scale-110'><a className="px-4 py-2 ml-8 text-white border-none rounded-md bg-gradient-to-r from-cyan-500 to-teal-500" href="https://drive.google.com/file/d/16xGElql4_MwIVUDy-xTcxkdus_ElCEam/view?usp=share_link" target="_blank" rel="noreferrer">Resume</a></li>
         </ul>
         </nav>
+
         {/* Profile Info */}
         <div className='p-10 py-10 text-center'>
             <h3 className='py-2 text-2xl font-medium md:text-4xl dark:text-white font-raleway'>
@@ -43,6 +47,7 @@ export default function Home() {
             I`m a full-stack webb developer.
             </h3>
         </div>
+
         {/* Links to socials */}
         <div className='flex justify-center gap-16 py-3 text-5xl text-gray-600 dark:text-teal-500'>
         <a href="https://www.github.com/smackdh" target="_blank" rel="noreferrer" className='duration-300 hover:scale-110 dark:hover:text-teal-300'><AiFillGithub/></a>
@@ -54,6 +59,7 @@ export default function Home() {
         <div className='relative mx-auto mt-20 overflow-hidden rounded-full bg-gradient-to-b from-teal-500 w-80 h-80 md:h-80 md:w-80'>
         <Image src={mattiasImg} layout="" objectFit="" alt="" className="scale-150"/>
         </div>
+
       </section>
       {/* Top Section End */}
 
@@ -61,88 +67,18 @@ export default function Home() {
       <section>
       <div className='py-10 text-center'>
         <h3 className="py-1 text-5xl dark:text-white">About</h3>
-        <hr className='w-20 h-1 mx-auto my-6 bg-white rounded '/>
+        <hr className='w-20 h-1 mx-auto my-6 bg-white rounded dark:text-teal-500'/>
       </div>
       {/* Card One */}
-      <div className='justify-center gap-10 lg:flex md:flex-row '>
-        <div className='p-10 my-10 text-center transition duration-500 ease-in-out transform shadow-lg rounded-xl dark:bg-white lg:w-1/3'>
-          <Image className="mx-auto" src={design} width={100} height={100} alt=""/>
-          <h3 className='pt-8 pb-2 text-lg font-medium text-teal-600'>Front-end</h3>
-          <div className='flex justify-center gap-10'>
-            <div id='section-1'>
-              <div className='flex items-center gap-1'>
-                <i class="devicon-javascript-plain"></i>
-                <p className='py-1 text-gray-800'>JavaScript</p>
-              </div>
-              <div className='flex items-center gap-1'>
-                <i class="devicon-react-plain"></i>
-                <p className='py-1 text-gray-800'>React.js</p>
-              </div>
-              <div className='flex items-center gap-1'>
-                <i class="devicon-html5-plain"></i>
-                <p className='py-1 text-gray-800'>HTML </p>
-              </div>
-            </div>
-            <div id='section-2'>
-              <div className='flex items-center gap-1'>
-              <i class="devicon-css3-plain"></i>
-              <p className='py-1 text-gray-800'>CSS </p>
-              </div>
-              <div className='flex items-center gap-1'>
-              <i class="devicon-tailwindcss-plain"></i>
-              <p className='py-1 text-gray-800'>Tailwind </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      {/* Card Two */}
-        <div className="p-10 my-10 text-center transition duration-500 ease-in-out transform shadow-lg rounded-xl dark:bg-white lg:w-1/3">
-          <Image className="mx-auto" src={code} width={100} height={100} alt=""/>
-          <h3 className='pt-8 pb-2 text-lg font-medium text-teal-600'>Back-end</h3>
-          <div className='flex justify-center gap-10'>
-            <div id='section-1'>
-              <div className='flex items-center gap-1'>
-                <i class="devicon-ruby-plain"></i>
-                <p className='py-1 text-gray-800'>Ruby</p>
-              </div>
-              <div className='flex items-center gap-1'>
-                <i class="devicon-rails-plain"></i>
-                <p className='py-1 text-gray-800'>Rails</p>
-              </div>
-            </div>
-            <div id='section-2'>
-              <div className='flex items-center gap-1'>
-                <i class="devicon-postgresql-plain"></i>
-                <p className='py-1 text-gray-800'>PostgreSQL</p>
-              </div>
-              <div className='flex items-center gap-1'>
-                <i class="devicon-nodejs-plain"></i>
-                <p className='py-1 text-gray-800'>Node.js</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      {/* Card Three */}
-        <div className='p-10 my-10 text-center transition duration-500 ease-in-out transform shadow-lg rounded-xl dark:bg-white lg:w-1/3'>
-          <Image className="mx-auto" src={consulting} width={100} height={100} alt=""/>
-          <h3 className='pt-8 pb-2 text-lg font-medium text-teal-600'>Extras</h3>
-          <div className='flex justify-center gap-10'>
-            <div id='section-1'>
-              <div className='flex items-center gap-1'>
-              <i class="devicon-figma-plain"></i>
-              <p className='py-1 text-gray-800'>Figma</p>
-              </div>
-            </div>
-            <div id='section-2'>
-              <div className='flex items-center gap-1'>
-                <i class="devicon-heroku-plain"></i>
-                <p className='py-1 text-gray-800'>Heroku</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+      {
+        cardsDatas.map(cardData => <Card title={cardData.title} key={cardData.id} imgSrc={cardData.imgSrc}
+        language={
+          cardData.language.map(thing => CardLanguages(thing.name, thing.icon))
+          }/>)
+      }
       </section>
+      {/* </div> */}
 
       {/* Projects Section */}
       <section>
@@ -150,18 +86,18 @@ export default function Home() {
         <h3 className="py-1 text-5xl dark:text-white">Projects</h3>
         <hr className='w-20 h-1 mx-auto my-6 bg-white rounded '/>
       </div>
-      <div className='flex flex-col gap-10 py-10 md:flex-row lg:flex-row lg:flex-wrap '>
-        <div className='flex-1 duration-300 basis-1/3 hover:scale-105 hover:translate-y-1'>
+      <div className='flex flex-col gap-10 py-10 md:flex-row lg:flex-row lg:flex-wrap'>
+        <div className='flex-1 duration-300 lg:w-1/2 basis-1/3 hover:scale-105 hover:translate-y-1'>
         <a href="https://www.ozei.fun/" target="_blank" rel="noreferrer">
           <Image href="https://www.ozei.fun" src={ozei} className="object-cover rounded-lg" width={"100%"} height={"100%"} layout="responsive" alt=""/>
           </a>
-      </div>
         </div>
-        <div className='flex-1 duration-300 basis-1/3 hover:translate-y-1 hover:scale-105'>
-        <a href="https://github.com/smackdh/fluffy_friends_finder" target="_blank" rel="noreferrer">
-          <Image href="https://github.com/smackdh/fluffy_friends_finder" src={fff} className="object-cover rounded-lg" width={"100%"} height={"100%"} layout="responsive" alt=""/>
+        <div className='flex-1 duration-300 lg:w-1/2 basis-1/3 hover:translate-y-1 hover:scale-105'>
+          <a href="https://github.com/smackdh/fluffy_friends_finder" target="_blank" rel="noreferrer">
+            <Image href="https://github.com/smackdh/fluffy_friends_finder" src={fff} className="object-cover rounded-lg" width={"100%"} height={"100%"} layout="responsive" alt=""/>
           </a>
         </div>
+      </div>
       </section>
       </main>
     </div>
