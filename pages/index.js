@@ -69,7 +69,7 @@ export default function Home() {
       {/* Cards section */}
       <section>
             <SectionTitle title={"About"} />
-        <div className='flex flex-col justify-center gap-10 w-72'>
+        <div className='md:flex md:justify-center md:space-x-8 md:px-14'>
             {
               cardsDatas.map(cardData => <Card title={cardData.title} languages={cardData.language} key={cardData.id} imgSrc={cardData.imgSrc}  />)
             }

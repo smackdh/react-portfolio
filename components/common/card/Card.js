@@ -9,10 +9,12 @@ const Card = (props) => {
   const {title, imgSrc, languages } = props;
 
   return(
-        <div className='p-10 my-10 text-center shadow-lg rounded-xl dark:bg-white xl:w-72 lg:w-60: md:w-48'>
+        <div className='p-10 px-4 py-4 mx-auto my-10 mt-16 text-center shadow-lg w-72 rounded-xl dark:bg-white md:mx-0'>
+          <div className="w-sm">
+
           {
             imgSrc === "frontEnd" ?
-            <Image className="mx-auto" src={frontEnd} width={100} height={100} alt="" />
+            <Image className="w-64" src={frontEnd} width={100} height={100} alt="" />
             :
             <></>
           }
@@ -30,7 +32,7 @@ const Card = (props) => {
             <></>
           }
 
-          <h3 className='pt-8 pb-3 text-lg font-medium text-teal-600 '>{title}</h3>
+          <h1 className='pt-8 pb-3 text-lg font-medium text-teal-600 '>{title}</h1>
           <div className='flex justify-center gap-10 font-semibold md:gap-0 md:justify-start lg:justify-center lg:gap-10 lg:flex-row'>
             <div id='section-1'>
             {
@@ -42,6 +44,7 @@ const Card = (props) => {
               languages[1].map(languageSectionTwo =>  <CardLanguages icon={languageSectionTwo.icon} name={languageSectionTwo.name} />)
             }
             </div>
+          </div>
           </div>
         </div>
 
