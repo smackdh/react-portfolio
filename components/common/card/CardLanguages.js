@@ -1,4 +1,7 @@
-const CardLanguages = ({name, icon}) => {
+const CardLanguages = (props) => {
+
+  const {icon, name} = props;
+
   return (
     <div className='flex items-center gap-1'>
                 <i class={icon}></i>

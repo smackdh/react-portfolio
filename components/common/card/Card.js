@@ -6,13 +6,10 @@ import CardLanguages from "./CardLanguages";
 import { imagePath } from "../imgs/imagePath";
 
 const Card = (props) => {
-  const {title, imgSrc} = props;
+  const {title, imgSrc, languages } = props;
 
   return(
-
-    <div className='justify-center gap-10 lg:flex md:flex-row '>
-        <div className='p-10 my-10 text-center transition duration-500 ease-in-out transform shadow-lg rounded-xl dark:bg-white lg:w-1/3'>
-
+        <div className='p-10 my-10 text-center shadow-lg rounded-xl dark:bg-white xl:w-72 lg:w-60: md:w-48'>
           {
             imgSrc === "frontEnd" ?
             <Image className="mx-auto" src={frontEnd} width={100} height={100} alt="" />
@@ -33,35 +30,21 @@ const Card = (props) => {
             <></>
           }
 
-          <h3 className='pt-8 pb-2 text-lg font-medium text-teal-600'>{title}</h3>
-          <div className='flex justify-center gap-10'>
+          <h3 className='pt-8 pb-3 text-lg font-medium text-teal-600 '>{title}</h3>
+          <div className='flex justify-center gap-10 font-semibold md:gap-0 md:justify-start lg:justify-center lg:gap-10 lg:flex-row'>
             <div id='section-1'>
-              <div className='flex items-center gap-1'>
-                <i class="devicon-javascript-plain"></i>
-                <p className='py-1 text-gray-800'>javascript</p>
-              </div>
-              <div className='flex items-center gap-1'>
-                <i class="devicon-react-plain"></i>
-                <p className='py-1 text-gray-800'>React.js</p>
-              </div>
-              <div className='flex items-center gap-1'>
-                <i class="devicon-html5-plain"></i>
-                <p className='py-1 text-gray-800'>HTML </p>
-              </div>
+            {
+              languages[0].map(languageSectionOne =>  <CardLanguages icon={languageSectionOne.icon} name={languageSectionOne.name} />)
+            }
             </div>
             <div id='section-2'>
-              <div className='flex items-center gap-1'>
-              <i class="devicon-css3-plain"></i>
-              <p className='py-1 text-gray-800'>CSS </p>
-              </div>
-              <div className='flex items-center gap-1'>
-              <i class="devicon-tailwindcss-plain"></i>
-              <p className='py-1 text-gray-800'>Tailwind </p>
-              </div>
+            {
+              languages[1].map(languageSectionTwo =>  <CardLanguages icon={languageSectionTwo.icon} name={languageSectionTwo.name} />)
+            }
             </div>
           </div>
         </div>
-      </div>
+
   );
 }
 

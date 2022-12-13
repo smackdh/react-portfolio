@@ -6,13 +6,16 @@ import mattiasImg from "../public/avatar.png";
 import frontEnd from "../public/design.png";
 import backEnd from "../public/code.png";
 import extras from "../public/consulting.png";
+
 import ozei from '../public/Ozei2.png';
 import fff from '../public/FFF-image.png';
+import watchlist from '../public/watchlist2.png';
+
 import Card from '../components/common/card/Card';
 import {useState} from "react";
 import cardsDatas from '../components/common/card/cardsDatas';
 import CardLanguages from '../components/common/card/CardLanguages';
-
+import SectionTitle from '../components/common/sectionTitle/SectionTitle';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -65,36 +68,32 @@ export default function Home() {
 
       {/* Cards section */}
       <section>
-      <div className='py-10 text-center'>
-        <h3 className="py-1 text-5xl dark:text-white">About</h3>
-        <hr className='w-20 h-1 mx-auto my-6 bg-white rounded dark:text-teal-500'/>
-      </div>
-      {/* Card One */}
-
-      {
-        cardsDatas.map(cardData => <Card title={cardData.title} key={cardData.id} imgSrc={cardData.imgSrc}
-        language={
-          cardData.language.map(thing => CardLanguages(thing.name, thing.icon))
-          }/>)
-      }
+            <SectionTitle title={"About"} />
+        <div className='flex flex-col justify-center gap-10 w-72'>
+            {
+              cardsDatas.map(cardData => <Card title={cardData.title} languages={cardData.language} key={cardData.id} imgSrc={cardData.imgSrc}  />)
+            }
+        </div>
       </section>
-      {/* </div> */}
 
       {/* Projects Section */}
+
       <section>
-      <div className='py-10 text-center'>
-        <h3 className="py-1 text-5xl dark:text-white">Projects</h3>
-        <hr className='w-20 h-1 mx-auto my-6 bg-white rounded '/>
-      </div>
-      <div className='flex flex-col gap-10 py-10 md:flex-row lg:flex-row lg:flex-wrap'>
-        <div className='flex-1 duration-300 lg:w-1/2 basis-1/3 hover:scale-105 hover:translate-y-1'>
+      <SectionTitle title={"Projects"} />
+      <div className='flex flex-col justify-center gap-10 py-10 md:flex-row lg:flex-row lg:flex-wrap'>
+        <div className='duration-300 lg:w-1/2 basis-1/3 hover:scale-105 hover:translate-y-1'>
         <a href="https://www.ozei.fun/" target="_blank" rel="noreferrer">
           <Image href="https://www.ozei.fun" src={ozei} className="object-cover rounded-lg" width={"100%"} height={"100%"} layout="responsive" alt=""/>
           </a>
         </div>
-        <div className='flex-1 duration-300 lg:w-1/2 basis-1/3 hover:translate-y-1 hover:scale-105'>
+        <div className='duration-300 lg:w-1/2 basis-1/3 hover:translate-y-1 hover:scale-105'>
           <a href="https://github.com/smackdh/fluffy_friends_finder" target="_blank" rel="noreferrer">
-            <Image href="https://github.com/smackdh/fluffy_friends_finder" src={fff} className="object-cover rounded-lg" width={"100%"} height={"100%"} layout="responsive" alt=""/>
+            <Image href="https://fluffy-friends-forever.herokuapp.com/" src={fff} className="object-cover rounded-lg" width={"100%"} height={"100%"} layout="responsive" alt=""/>
+          </a>
+        </div>
+        <div className='duration-300 lg:w-1/2 basis-1/3 hover:translate-y-1 hover:scale-105'>
+          <a href="https://mattias-watchlist.herokuapp.com/lists" target="_blank" rel="noreferrer">
+            <Image href="https://mattias-watchlist.herokuapp.com/lists" src={watchlist} className="rounded-lg object-fit" width={"100%"} height={"100%"} layout="responsive" alt=""/>
           </a>
         </div>
       </div>
