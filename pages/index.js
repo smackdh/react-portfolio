@@ -100,7 +100,7 @@ export default function Home() {
       {/* Projects Section */}
       <section className='min-h-screen py-10'>
       <SectionTitle title={"Projects"} />
-      <div className='grid py-10 lg:grid-cols-3 md:grid-cols-2'>
+      <div className='grid gap-2 py-10 lg:grid-cols-3 md:grid-cols-2'>
         <div className='duration-300 hover:-translate-y-3'>
         <a href="https://www.ozei.fun/" target="_blank" rel="noreferrer">
           <Image href="https://www.ozei.fun" src={ozei} className="object-cover " width={"100%"} height={"100%"} layout="responsive" alt=""/>
