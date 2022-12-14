@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import {BsFillMoonStarsFill} from 'react-icons/bs';
-import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
+import {AiFillLinkedin, AiFillGithub, AiOutlineArrowRight} from 'react-icons/ai';
 import Image from "next/legacy/image";
 import mattiasImg from "../public/avatar.png";
 import frontEnd from "../public/design.png";
@@ -51,25 +51,33 @@ export default function Home() {
             I`m a full-stack webb developer.
             </h3>
           </div>
-          <div className='mt-10 duration-300 hover:scale-110'><a className="px-4 py-2 text-white border-none rounded-md bg-gradient-to-r from-cyan-500 to-teal-500" href="https://drive.google.com/file/d/16xGElql4_MwIVUDy-xTcxkdus_ElCEam/view?usp=share_link" target="_blank" rel="noreferrer">View my work ➡ </a></div>
+          <div className='mx-auto mt-10 duration-300 group hover:scale-110'>
+            <a className="relative inline-block py-2 text-white border-none rounded-md w-44 bg-gradient-to-r from-cyan-500 to-teal-500" href="#profile">
+            View my work
+            <div>
+            <AiOutlineArrowRight className='absolute duration-300 group-hover:rotate-90 right-4 bottom-3'/>
+            </div>
+            </a>
+          </div>
         </div>
       </section>
       {/* Top Section End */}
 
-      {/* Cards section */}
-      <section>
+      {/* About section */}
+      <section id="about" className=''>
             <SectionTitle title={"About"} />
+            <div id="profile">
+      </div>
         <div className='md:flex md:justify-center md:space-x-8 md:px-14'>
             {
               cardsDatas.map(cardData => <Card title={cardData.title} languages={cardData.language} key={cardData.id} imgSrc={cardData.imgSrc}  />)
             }
         </div>
-      </section>
 
+      </section>
       {/* Socials Start */}
       <section>
- {/* Links to socials */}
-
+      {/* Links to socials */}
         <div className='flex flex-col'>
           <div className='relative mx-auto mt-10 mb-10 overflow-hidden rounded-full bg-gradient-to-b from-teal-500 w-60 h-60 md:h-80 md:w-80'>
             <Image src={mattiasImg} layout="" objectFit="" alt="" className="scale-150"/>
@@ -90,9 +98,9 @@ export default function Home() {
         </div>
       </section>
       {/* Projects Section */}
-      <section>
+      <section className='min-h-screen py-10'>
       <SectionTitle title={"Projects"} />
-      <div className='grid grid-cols-3 py-10'>
+      <div className='grid py-10 lg:grid-cols-3 md:grid-cols-2'>
         <div className='duration-300 hover:-translate-y-3'>
         <a href="https://www.ozei.fun/" target="_blank" rel="noreferrer">
           <Image href="https://www.ozei.fun" src={ozei} className="object-cover " width={"100%"} height={"100%"} layout="responsive" alt=""/>
@@ -102,13 +110,6 @@ export default function Home() {
           <a href="https://github.com/smackdh/fluffy_friends_finder" target="_blank" rel="noreferrer">
             <Image href="https://fluffy-friends-forever.herokuapp.com/" src={fff} className="object-cover " width={"100%"} height={"100%"} layout="responsive" alt=""/>
           </a>
-        </div>
-        <div className='duration-300 hover:-translate-y-3'>
-          <div className="bg-[url('/public/watchlist2.png')]">
-                <a href="https://mattias-watchlist.herokuapp.com/lists" target="_blank" rel="noreferrer">
-                <Image href="https://mattias-watchlist.herokuapp.com/lists" src={watchlist} className=" object-fit" width={"100%"} height={"100%"} layout="responsive" alt=""/>
-                </a>
-          </div>
         </div>
         <div className='duration-300 hover:-translate-y-3'>
           <div className="bg-[url('/public/watchlist2.png')]">
