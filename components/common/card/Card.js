@@ -1,12 +1,14 @@
+/* eslint-disable react/jsx-key */
 import Image from "next/legacy/image";
 import frontEnd from "../../../public/design.png";
 import backEnd from "../../../public/code.png";
 import extras from "../../../public/consulting.png";
 import CardLanguages from "./CardLanguages";
 import { imagePath } from "../imgs/imagePath";
+import cardDatas from "./cardsDatas";
 
 const Card = (props) => {
-  const {title, imgSrc, languages } = props;
+  const {title, imgSrc, languages} = props;
 
   return(
         <div className='p-10 px-4 py-4 mx-auto my-10 mt-16 text-center shadow-lg w-72 rounded-xl dark:bg-white md:mx-0'>
