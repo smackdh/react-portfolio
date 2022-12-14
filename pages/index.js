@@ -2,7 +2,7 @@ import Head from 'next/head'
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillLinkedin, AiFillGithub, AiOutlineArrowRight} from 'react-icons/ai';
 import Image from "next/legacy/image";
-import mattiasImg from "../public/avatar.png";
+import mattiasImg from "../public/Avatar.png";
 import frontEnd from "../public/design.png";
 import backEnd from "../public/code.png";
 import extras from "../public/consulting.png";
