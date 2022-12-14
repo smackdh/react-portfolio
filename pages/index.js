@@ -31,8 +31,8 @@ export default function Home() {
       {/* Top Section Start */}
       <section className="min-h-screen">
 
-      <nav className="flex justify-between p-10 mb-12 dark:text-white">
-        <h1 className='lg:text-xl animate-bounce'>smackdh</h1>
+      <nav className="flex justify-between pt-10 dark:text-white">
+        <h1 className='lg:text-xl'>smackdh</h1>
         <ul className='flex items-center'>
           <li>
             <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='text-2xl duration-300 cursor-pointer dark:text-white hover:scale-110'/>
@@ -42,26 +42,17 @@ export default function Home() {
         </nav>
 
         {/* Profile Info */}
-        <div className='p-10 py-10 text-center'>
+        <div className='flex flex-col justify-center min-h-screen p-2 text-center'>
+          <div>
             <h3 className='py-2 text-2xl font-medium md:text-4xl dark:text-white font-raleway'>
             Hello, I`m <span className='font-extrabold text-teal-500'>Mattias Velamsson</span>
             </h3>
             <h3 className='text-2xl font-medium md:text-4xl dark:text-white font-raleway'>
             I`m a full-stack webb developer.
             </h3>
+          </div>
         </div>
 
-        {/* Links to socials */}
-        <div className='flex justify-center gap-16 py-3 text-5xl text-gray-600 dark:text-teal-500'>
-        <a href="https://www.github.com/smackdh" target="_blank" rel="noreferrer" className='duration-300 hover:scale-110 dark:hover:text-teal-300'><AiFillGithub/></a>
-        <a href="https://www.linkedin.com/in/mattias-velamsson" target="_blank" rel="noreferrer" className='duration-300 hover:scale-110 dark:hover:text-teal-300'><AiFillLinkedin/></a>
-        </div>
-        <div>
-
-        </div>
-        <div className='relative mx-auto mt-20 overflow-hidden rounded-full bg-gradient-to-b from-teal-500 w-80 h-80 md:h-80 md:w-80'>
-        <Image src={mattiasImg} layout="" objectFit="" alt="" className="scale-150"/>
-        </div>
 
       </section>
       {/* Top Section End */}
@@ -76,8 +67,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Socials Start */}
+      <section>
+ {/* Links to socials */}
 
+        <div className='flex flex-col'>
+          <div className='relative mx-auto mt-10 mb-10 overflow-hidden rounded-full bg-gradient-to-b from-teal-500 w-60 h-60 md:h-80 md:w-80'>
+            <Image src={mattiasImg} layout="" objectFit="" alt="" className="scale-150"/>
+          </div>
+          <div className='flex flex-col text-white'>
+            <h1 className='mx-auto text-3xl'>
+              Who`s this guy?
+            </h1>
+            <p className='mx-auto my-4 text-center md:w-1/3'>
+              Full-stack Developer in Tokyo, Japan. I believe that the key to successful development is a combination of
+              passion, hard work, and a love for problem-solving. <span className='text-teal-500'>Let's work together and create something amazing!</span>
+            </p>
+          </div>
+        </div>
+        <div className='flex justify-center gap-16 py-3 text-5xl text-gray-600 dark:text-teal-500'>
+          <a href="https://www.github.com/smackdh" target="_blank" rel="noreferrer" className='duration-300 hover:scale-110 dark:hover:text-teal-300'><AiFillGithub/></a>
+          <a href="https://www.linkedin.com/in/mattias-velamsson" target="_blank" rel="noreferrer" className='duration-300 hover:scale-110 dark:hover:text-teal-300'><AiFillLinkedin/></a>
+        </div>
+      </section>
+      {/* Projects Section */}
       <section>
       <SectionTitle title={"Projects"} />
       <div className='flex flex-col justify-center gap-10 py-10 md:flex-row lg:flex-row lg:flex-wrap'>
@@ -92,9 +105,11 @@ export default function Home() {
           </a>
         </div>
         <div className='duration-300 lg:w-1/2 basis-1/3 hover:translate-y-1 hover:scale-105'>
-          <a href="https://mattias-watchlist.herokuapp.com/lists" target="_blank" rel="noreferrer">
-            <Image href="https://mattias-watchlist.herokuapp.com/lists" src={watchlist} className="rounded-lg object-fit" width={"100%"} height={"100%"} layout="responsive" alt=""/>
-          </a>
+          <div className="bg-[url('/public/watchlist2.png')]">
+                <a href="https://mattias-watchlist.herokuapp.com/lists" target="_blank" rel="noreferrer">
+                <Image href="https://mattias-watchlist.herokuapp.com/lists" src={watchlist} className="rounded-lg object-fit" width={"100%"} height={"100%"} layout="responsive" alt=""/>
+                </a>
+          </div>
         </div>
       </div>
       </section>
