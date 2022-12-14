@@ -82,7 +82,7 @@ export default function Home() {
           <div className='relative mx-auto mt-10 mb-10 overflow-hidden rounded-full bg-gradient-to-b from-teal-500 w-60 h-60 md:h-80 md:w-80'>
             <Image src={mattiasImg} layout="" objectFit="" alt="" className="scale-150"/>
           </div>
-          <div className='flex flex-col text-white'>
+          <div className='flex flex-col dark:text-white'>
             <h1 className='mx-auto text-3xl'>
               Who`s this guy?
             </h1>
