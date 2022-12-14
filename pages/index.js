@@ -51,9 +51,8 @@ export default function Home() {
             I`m a full-stack webb developer.
             </h3>
           </div>
+          <div className='mt-10 duration-300 hover:scale-110'><a className="px-4 py-2 text-white border-none rounded-md bg-gradient-to-r from-cyan-500 to-teal-500" href="https://drive.google.com/file/d/16xGElql4_MwIVUDy-xTcxkdus_ElCEam/view?usp=share_link" target="_blank" rel="noreferrer">View my work ➡ </a></div>
         </div>
-
-
       </section>
       {/* Top Section End */}
 
@@ -93,21 +92,28 @@ export default function Home() {
       {/* Projects Section */}
       <section>
       <SectionTitle title={"Projects"} />
-      <div className='flex flex-col justify-center gap-10 py-10 md:flex-row lg:flex-row lg:flex-wrap'>
-        <div className='duration-300 lg:w-1/2 basis-1/3 hover:scale-105 hover:translate-y-1'>
+      <div className='grid grid-cols-3 py-10'>
+        <div className='duration-300 hover:-translate-y-3'>
         <a href="https://www.ozei.fun/" target="_blank" rel="noreferrer">
-          <Image href="https://www.ozei.fun" src={ozei} className="object-cover rounded-lg" width={"100%"} height={"100%"} layout="responsive" alt=""/>
+          <Image href="https://www.ozei.fun" src={ozei} className="object-cover " width={"100%"} height={"100%"} layout="responsive" alt=""/>
           </a>
         </div>
-        <div className='duration-300 lg:w-1/2 basis-1/3 hover:translate-y-1 hover:scale-105'>
+        <div className='duration-300 hover:-translate-y-3'>
           <a href="https://github.com/smackdh/fluffy_friends_finder" target="_blank" rel="noreferrer">
-            <Image href="https://fluffy-friends-forever.herokuapp.com/" src={fff} className="object-cover rounded-lg" width={"100%"} height={"100%"} layout="responsive" alt=""/>
+            <Image href="https://fluffy-friends-forever.herokuapp.com/" src={fff} className="object-cover " width={"100%"} height={"100%"} layout="responsive" alt=""/>
           </a>
         </div>
-        <div className='duration-300 lg:w-1/2 basis-1/3 hover:translate-y-1 hover:scale-105'>
+        <div className='duration-300 hover:-translate-y-3'>
           <div className="bg-[url('/public/watchlist2.png')]">
                 <a href="https://mattias-watchlist.herokuapp.com/lists" target="_blank" rel="noreferrer">
-                <Image href="https://mattias-watchlist.herokuapp.com/lists" src={watchlist} className="rounded-lg object-fit" width={"100%"} height={"100%"} layout="responsive" alt=""/>
+                <Image href="https://mattias-watchlist.herokuapp.com/lists" src={watchlist} className=" object-fit" width={"100%"} height={"100%"} layout="responsive" alt=""/>
+                </a>
+          </div>
+        </div>
+        <div className='duration-300 hover:-translate-y-3'>
+          <div className="bg-[url('/public/watchlist2.png')]">
+                <a href="https://mattias-watchlist.herokuapp.com/lists" target="_blank" rel="noreferrer">
+                <Image href="https://mattias-watchlist.herokuapp.com/lists" src={watchlist} className=" object-fit" width={"100%"} height={"100%"} layout="responsive" alt=""/>
                 </a>
           </div>
         </div>
